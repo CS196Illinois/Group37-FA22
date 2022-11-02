@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.close, color: Colors.black),
+            icon: const Icon(Icons.close, color: Colors.black),
             onPressed: () {
               //do something
             },
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(
+            const SizedBox(
               // <-- SEE HERE
               height: 150,
               width: 300,
@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             SizedBox(
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   child: const Text('Tag Location')),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             SizedBox(
