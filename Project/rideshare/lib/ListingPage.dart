@@ -1,3 +1,5 @@
+import 'package:rideshare/createListingPage.dart';
+
 import '../constants/theme.dart';
 import '../constants/util.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +30,13 @@ class _ListingPageState extends State<ListingPage> {
         actions: <Widget>[
           IconButton(
               onPressed: () {
-                print("add button clicked");
+                //print("add button clicked");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CreateListingPage(
+                              title: 'Create Listing Page',
+                            )));
               },
               icon: const Icon(Icons.add))
         ],
