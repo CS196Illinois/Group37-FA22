@@ -1,32 +1,16 @@
 import 'package:flutter/material.dart';
 //import 'package:table_calendar/table_calendar.dart';
 
-class CreateListingPage extends StatelessWidget {
-  const CreateListingPage({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Create Listings Page View',
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
-      ),
-      home: const MyHomePage(title: 'Create Post'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class CreateListingPage extends StatefulWidget {
+  const CreateListingPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<CreateListingPage> createState() => _CreateListingPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _CreateListingPageState extends State<CreateListingPage> {
   int _counter = 0;
 
   void _emp() {
