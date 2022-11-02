@@ -22,14 +22,6 @@ class _CreateListingPageState extends State<CreateListingPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.close, color: Colors.black),
-            onPressed: () {
-              //do something
-            },
-          )
-        ],
       ),
       body: Center(
         child: Column(
