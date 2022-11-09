@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 //import 'package:table_calendar/table_calendar.dart';
+//import '../constants/theme.dart';
+
+import 'ListingPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,8 +34,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
   void _emp() {
     setState(() {});
   }
@@ -46,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(
             icon: Icon(Icons.close, color: Colors.black),
             onPressed: () {
-              //do something
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => const ListingPage()));
             },
           )
         ],
@@ -87,7 +89,12 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 50,
               width: 300,
               child: ElevatedButton(
-                  onPressed: _emp,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ListingPage()));
+                  },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
                     onPrimary: Colors.black,

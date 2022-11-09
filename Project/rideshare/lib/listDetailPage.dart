@@ -50,10 +50,10 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ListingDetailPage> createState() => _ListingDetailPage();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _ListingDetailPage extends State<ListingDetailPage> {
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done

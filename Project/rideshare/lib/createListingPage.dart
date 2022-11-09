@@ -11,8 +11,6 @@ class CreateListingPage extends StatefulWidget {
 }
 
 class _CreateListingPageState extends State<CreateListingPage> {
-  int _counter = 0;
-
   void _emp() {
     setState(() {});
   }

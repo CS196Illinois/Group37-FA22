@@ -4,6 +4,8 @@ import '../constants/theme.dart';
 import '../constants/util.dart';
 import 'package:flutter/material.dart';
 
+import 'listDetailPage.dart';
+
 class ListingPage extends StatefulWidget {
   const ListingPage({Key? key}) : super(key: key);
 
@@ -187,7 +189,12 @@ class _ListingPageState extends State<ListingPage> {
                     padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
                     child: InkWell(
                       onTap: () {
-                        null;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ListingDetailPage(
+                                      title: 'Listing Details Page',
+                                    )));
                       },
                       child: Container(
                         width: double.infinity,
