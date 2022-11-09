@@ -192,7 +192,7 @@ class _ListingPageState extends State<ListingPage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const ListingDetailPage(
+                                builder: (context) => const DetailPage(
                                       title: 'Listing Details Page',
                                     )));
                       },
