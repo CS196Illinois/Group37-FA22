@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../constants/theme.dart';
 
 import 'ListingPage.dart';
+import 'listDetailPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: lightTheme,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Home Page'),
     );
   }
 }
