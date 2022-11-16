@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'signInPage.dart';
 import 'welcomePage.dart';
 import '../constants/theme.dart';
 
-import 'listingPage.dart';
+import 'ListingPage.dart';
 import 'listDetailPage.dart';
 
 void main() {
@@ -68,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: IconButton(
             onPressed: () {
               Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => const WelcomePage()));
+                  MaterialPageRoute(builder: (context) => const SignInPage()));
             },
             icon: const Icon(Icons.remove)),
         // Here we take the value from the MyHomePage object that was created by
