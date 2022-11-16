@@ -55,15 +55,21 @@ ThemeData lightTheme = ThemeData(
   textTheme: const TextTheme(
     headline1: TextStyle(
       color: Color(0xff1f1f1f),
+      fontSize: 25,
     ),
     headline2: TextStyle(
       color: Color(0xff1f1f1f),
+      fontSize: 18,
     ),
     headline3: TextStyle(
       color: Color(0xff1f1f1f),
     ),
     headline4: TextStyle(
       color: Color(0xff212121),
+    ),
+    bodyText1: TextStyle(
+      color: Color(0xff1f1f1f),
+      fontSize: 25,
     ),
   ),
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.amber)
