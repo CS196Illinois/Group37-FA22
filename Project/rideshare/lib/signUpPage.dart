@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:rideshare/constants/theme.dart';
 
-import 'signUpPage.dart';
+import 'signInPage.dart';
 
-class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
-  _SignInPageState createState() => _SignInPageState();
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _SignUpPageState extends State<SignUpPage> {
   TextEditingController? emailTextController;
   TextEditingController? passwordTextController;
 
@@ -48,27 +48,12 @@ class _SignInPageState extends State<SignInPage> {
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Container(
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: lightTheme.backgroundColor,
-                    ),
-                    alignment: const AlignmentDirectional(-1, 0),
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0, 0, 16, 0),
-                      child: Text(
-                        'Sign In',
-                        style: lightTheme.textTheme.headline1,
-                      ),
-                    ),
-                  ),
                   InkWell(
                     onTap: () {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SignUpPage(),
+                          builder: (context) => const SignInPage(),
                         ),
                       );
                     },
@@ -80,10 +65,28 @@ class _SignInPageState extends State<SignInPage> {
                       alignment: const AlignmentDirectional(-1, 0),
                       child: Padding(
                         padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 16, 0),
+                        child: Text(
+                          'Sign In',
+                          style: lightTheme.textTheme.headline2,
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: null,
+                    child: Container(
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: lightTheme.backgroundColor,
+                      ),
+                      alignment: const AlignmentDirectional(-1, 0),
+                      child: Padding(
+                        padding:
                             const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
                         child: Text(
                           'Sign Up',
-                          style: lightTheme.textTheme.headline2,
+                          style: lightTheme.textTheme.headline1,
                         ),
                       ),
                     ),
@@ -97,7 +100,7 @@ class _SignInPageState extends State<SignInPage> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Text(
-                    'Access your account.',
+                    'Create your account',
                     style: lightTheme.textTheme.bodyText2,
                   ),
                 ],
@@ -259,7 +262,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                       onPressed: null,
                       child: Text(
-                        "Sign In",
+                        "Sign Up",
                         style: lightTheme.textTheme.bodyText1,
                       ),
                     ),
