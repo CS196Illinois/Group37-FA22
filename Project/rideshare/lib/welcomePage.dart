@@ -84,7 +84,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 width: 300,
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.grey,
+                    backgroundColor: lightTheme.buttonColor,
                   ),
                   onPressed: () {
                     Navigator.pushReplacement(
@@ -108,7 +108,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 width: 300,
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.grey,
+                    backgroundColor: lightTheme.buttonColor,
                   ),
                   onPressed: () {
                     Navigator.pushReplacement(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'constants/theme.dart';
 //import 'package:table_calendar/table_calendar.dart';
 
 class CreateListingPage extends StatefulWidget {
@@ -45,7 +47,7 @@ class _CreateListingPageState extends State<CreateListingPage> {
               child: ElevatedButton(
                   onPressed: _emp,
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
+                    primary: lightTheme.buttonColor,
                     onPrimary: Colors.black,
                   ),
                   child: const Text('Tag Location')),
@@ -59,7 +61,7 @@ class _CreateListingPageState extends State<CreateListingPage> {
               child: ElevatedButton(
                   onPressed: _emp,
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
+                    primary: lightTheme.buttonColor,
                     onPrimary: Colors.black,
                   ),
                   child: const Text('Create Post')),

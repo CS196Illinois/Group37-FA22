@@ -48,7 +48,7 @@ ThemeData lightTheme = ThemeData(
     ),
   ),
   // ignore: deprecated_member_use
-  buttonColor: const Color(0x999da0),
+  buttonColor: Colors.orangeAccent,
   primaryColor: const Color(0xffffffff),
   bottomAppBarColor: const Color(0xffffffff),
   disabledColor: const Color(0xffd4d1d1),
@@ -58,6 +58,7 @@ ThemeData lightTheme = ThemeData(
     headline1: TextStyle(
       color: Color(0xff1f1f1f),
       fontSize: 25,
+      fontWeight: FontWeight.bold,
     ),
     headline2: TextStyle(
       color: Color(0xff1f1f1f),

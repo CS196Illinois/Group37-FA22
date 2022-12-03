@@ -256,7 +256,7 @@ class _SignInPageState extends State<SignInPage> {
                     width: 150,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        backgroundColor: lightTheme.canvasColor,
+                        backgroundColor: lightTheme.buttonColor,
                       ),
                       onPressed: () {
                         Navigator.pushReplacement(
