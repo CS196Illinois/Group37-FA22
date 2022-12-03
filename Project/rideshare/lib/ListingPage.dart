@@ -98,7 +98,7 @@ class _ListingPageState extends State<ListingPage> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0, 4, 0, 0),
                                   child: Text('Ride Request',
-                                      style: lightTheme.textTheme.bodyText2),
+                                      style: lightTheme.textTheme.bodyText1),
                                 ),
                               ],
                             ),
@@ -152,7 +152,7 @@ class _ListingPageState extends State<ListingPage> {
                                       0, 0, 0, 4),
                                   child: Icon(
                                     Icons.schedule,
-                                    color: lightTheme.primaryColor,
+                                    color: lightTheme.buttonColor,
                                     size: 20,
                                   ),
                                 ),
@@ -160,14 +160,14 @@ class _ListingPageState extends State<ListingPage> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       4, 0, 0, 0),
                                   child: Text('Oct. 11th 8:00am ',
-                                      style: lightTheme.textTheme.bodyText1),
+                                      style: lightTheme.textTheme.bodyText2),
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       24, 0, 0, 4),
                                   child: Icon(
                                     Icons.location_on_sharp,
-                                    color: lightTheme.primaryColor,
+                                    color: lightTheme.buttonColor,
                                     size: 20,
                                   ),
                                 ),
@@ -175,7 +175,7 @@ class _ListingPageState extends State<ListingPage> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       4, 0, 0, 0),
                                   child: Text('Champaign',
-                                      style: lightTheme.textTheme.bodyText1),
+                                      style: lightTheme.textTheme.bodyText2),
                                 ),
                               ],
                             ),
@@ -223,7 +223,7 @@ class _ListingPageState extends State<ListingPage> {
                                         const EdgeInsetsDirectional.fromSTEB(
                                             0, 4, 0, 0),
                                     child: Text('Ride Offer',
-                                        style: lightTheme.textTheme.bodyText2),
+                                        style: lightTheme.textTheme.bodyText1),
                                   ),
                                 ],
                               ),
@@ -276,7 +276,7 @@ class _ListingPageState extends State<ListingPage> {
                                             0, 0, 0, 4),
                                     child: Icon(
                                       Icons.schedule,
-                                      color: lightTheme.primaryColor,
+                                      color: lightTheme.buttonColor,
                                       size: 20,
                                     ),
                                   ),
@@ -285,7 +285,7 @@ class _ListingPageState extends State<ListingPage> {
                                         const EdgeInsetsDirectional.fromSTEB(
                                             4, 0, 0, 0),
                                     child: Text('Oct. 12th 9:00pm',
-                                        style: lightTheme.textTheme.bodyText1),
+                                        style: lightTheme.textTheme.bodyText2),
                                   ),
                                   Padding(
                                     padding:
@@ -293,7 +293,7 @@ class _ListingPageState extends State<ListingPage> {
                                             24, 0, 0, 4),
                                     child: Icon(
                                       Icons.location_on_sharp,
-                                      color: lightTheme.primaryColor,
+                                      color: lightTheme.buttonColor,
                                       size: 20,
                                     ),
                                   ),
@@ -302,7 +302,7 @@ class _ListingPageState extends State<ListingPage> {
                                         const EdgeInsetsDirectional.fromSTEB(
                                             4, 0, 0, 0),
                                     child: Text('St.Louis',
-                                        style: lightTheme.textTheme.bodyText1),
+                                        style: lightTheme.textTheme.bodyText2),
                                   ),
                                 ],
                               ),

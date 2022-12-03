@@ -47,6 +47,8 @@ ThemeData lightTheme = ThemeData(
       }),
     ),
   ),
+  // ignore: deprecated_member_use
+  buttonColor: const Color(0x999da0),
   primaryColor: const Color(0xffffffff),
   bottomAppBarColor: const Color(0xffffffff),
   disabledColor: const Color(0xffd4d1d1),

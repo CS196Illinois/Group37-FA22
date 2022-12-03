@@ -7,13 +7,7 @@ import '../constants/theme.dart';
 import 'ListingPage.dart';
 import 'listDetailPage.dart';
 
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
-
-void main() async {
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+void main() {
   runApp(const MyApp());
 }
 
@@ -26,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: lightTheme,
-      home: MyHomePage(title: 'Home Page'),
+      home: const WelcomePage(),
     );
   }
 }
