@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants/theme.dart';
+import 'signInPage.dart';
+import 'signUpPage.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -82,9 +84,16 @@ class _WelcomePageState extends State<WelcomePage> {
                 width: 300,
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.grey,
+                    backgroundColor: lightTheme.buttonColor,
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignInPage(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Log In",
                     style: lightTheme.textTheme.bodyText1,
@@ -99,9 +108,16 @@ class _WelcomePageState extends State<WelcomePage> {
                 width: 300,
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.grey,
+                    backgroundColor: lightTheme.buttonColor,
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpPage(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Sign Up",
                     style: lightTheme.textTheme.bodyText1,

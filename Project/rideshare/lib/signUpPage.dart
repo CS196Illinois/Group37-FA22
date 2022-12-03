@@ -258,7 +258,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     width: 150,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        backgroundColor: lightTheme.canvasColor,
+                        backgroundColor: lightTheme.buttonColor,
                       ),
                       onPressed: null,
                       child: Text(

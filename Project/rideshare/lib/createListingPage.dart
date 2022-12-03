@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'constants/theme.dart';
 //import 'package:table_calendar/table_calendar.dart';
 
 class CreateListingPage extends StatefulWidget {
@@ -11,12 +13,15 @@ class CreateListingPage extends StatefulWidget {
 }
 
 class _CreateListingPageState extends State<CreateListingPage> {
+  DateTime dateTime = DateTime.now();
   void _emp() {
     setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
+    final hours = dateTime.hour.toString().padLeft(2, '0');
+    final minutes = dateTime.minute.toString().padLeft(2, '0');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -36,6 +41,52 @@ class _CreateListingPageState extends State<CreateListingPage> {
                 ),
               ),
             ),
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(20, 4, 20, 0),
+              child: SizedBox(
+                height: 50,
+                width: 300,
+                child: TextButton(
+                  onPressed: () async {
+                    pickDateTime();
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: lightTheme.buttonColor,
+                    onPrimary: Colors.black,
+                  ),
+                  child: Text(
+                      '${dateTime.year} / ${dateTime.month} / ${dateTime.day}   $hours : $minutes'),
+                ),
+              ),
+            ),
+            // Padding(
+            //   padding: const EdgeInsetsDirectional.fromSTEB(20, 4, 20, 0),
+            //   child: SizedBox(
+            //     height: 50,
+            //     width: 300,
+            //     child: TextButton(
+            //       onPressed: () async {
+            //         final time = await pickTime();
+            //         if (time == null) return;
+            //         final newDateTime = DateTime(
+            //           dateTime.year,
+            //           dateTime.month,
+            //           dateTime.day,
+            //           time.hour,
+            //           time.minute,
+            //         );
+            //         setState(() {
+            //           dateTime = newDateTime;
+            //         });
+            //       },
+            //       style: ElevatedButton.styleFrom(
+            //         primary: lightTheme.buttonColor,
+            //         onPrimary: Colors.black,
+            //       ),
+            //       child: Text('$hours : $minutes'),
+            //     ),
+            //   ),
+            // ),
             const SizedBox(
               height: 20,
             ),
@@ -45,7 +96,7 @@ class _CreateListingPageState extends State<CreateListingPage> {
               child: ElevatedButton(
                   onPressed: _emp,
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
+                    primary: lightTheme.buttonColor,
                     onPrimary: Colors.black,
                   ),
                   child: const Text('Tag Location')),
@@ -59,7 +110,7 @@ class _CreateListingPageState extends State<CreateListingPage> {
               child: ElevatedButton(
                   onPressed: _emp,
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
+                    primary: lightTheme.buttonColor,
                     onPrimary: Colors.black,
                   ),
                   child: const Text('Create Post')),
@@ -71,61 +122,30 @@ class _CreateListingPageState extends State<CreateListingPage> {
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
-}
 
-/*
-class TableBasicsExample extends StatefulWidget {
-  @override
-  _TableBasicsExampleState createState() => _TableBasicsExampleState();
-}
+  Future pickDateTime() async {
+    DateTime? date = await pickDate();
+    if (date == null) return;
 
-class _TableBasicsExampleState extends State<TableBasicsExample> {
-  CalendarFormat _calendarFormat = CalendarFormat.month;
-  DateTime _focusedDay = DateTime.now();
-  DateTime? _selectedDay;
+    TimeOfDay? time = await pickTime();
+    if (time == null) return;
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('TableCalendar - Basics'),
-      ),
-      body: TableCalendar(
-        firstDay: kFirstDay,
-        lastDay: kLastDay,
-        focusedDay: _focusedDay,
-        calendarFormat: _calendarFormat,
-        selectedDayPredicate: (day) {
-          // Use `selectedDayPredicate` to determine which day is currently selected.
-          // If this returns true, then `day` will be marked as selected.
+    final dateTime =
+        DateTime(date.year, date.month, date.day, time.hour, time.minute);
 
-          // Using `isSameDay` is recommended to disregard
-          // the time-part of compared DateTime objects.
-          return isSameDay(_selectedDay, day);
-        },
-        onDaySelected: (selectedDay, focusedDay) {
-          if (!isSameDay(_selectedDay, selectedDay)) {
-            // Call `setState()` when updating the selected day
-            setState(() {
-              _selectedDay = selectedDay;
-              _focusedDay = focusedDay;
-            });
-          }
-        },
-        onFormatChanged: (format) {
-          if (_calendarFormat != format) {
-            // Call `setState()` when updating calendar format
-            setState(() {
-              _calendarFormat = format;
-            });
-          }
-        },
-        onPageChanged: (focusedDay) {
-          // No need to call `setState()` here
-          _focusedDay = focusedDay;
-        },
-      ),
-    );
+    setState(() {
+      this.dateTime = dateTime;
+    });
   }
+
+  Future<DateTime?> pickDate() => showDatePicker(
+        context: context,
+        initialDate: dateTime,
+        firstDate: DateTime(2000),
+        lastDate: DateTime(2100),
+      );
+  Future<TimeOfDay?> pickTime() => showTimePicker(
+        context: context,
+        initialTime: TimeOfDay(hour: dateTime.hour, minute: dateTime.minute),
+      );
 }
-*/

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rideshare/constants/theme.dart';
 
+import 'ListingPage.dart';
 import 'signUpPage.dart';
 
 class SignInPage extends StatefulWidget {
@@ -255,9 +256,16 @@ class _SignInPageState extends State<SignInPage> {
                     width: 150,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        backgroundColor: lightTheme.canvasColor,
+                        backgroundColor: lightTheme.buttonColor,
                       ),
-                      onPressed: null,
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ListingPage(),
+                          ),
+                        );
+                      },
                       child: Text(
                         "Sign In",
                         style: lightTheme.textTheme.bodyText1,
